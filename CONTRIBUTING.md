@@ -54,3 +54,67 @@ If valid, you’ll see:
 ```bash
 [ OK ] path/to/your-file.json
 ```
+📌 3. Naming and Organization
+
+Please place files in the correct location and follow established naming conventions:
+
+```text
+Printer profiles → printer/<Manufacturer>/<Model>.json
+Filament profiles → filament/<Brand>/<ProductName>.json
+Process profiles → process/<Category>/<Profile>.json
+```
+Use simple, readable IDs, e.g.:
+
+```text
+Elegoo/Centauri-Carbon
+Polymaker/PolyLite-PLA
+Standard/0.20mm-quality
+```
+
+🧩 4. Schema Versioning
+Each profile must include:
+```text
+"op3d_schema_version": "0.1.0"
+```
+
+#### Do not change this unless the schema itself is updated and a migration is planned.
+Profiles must conform to the version indicated in the schema/ directory.
+
+🏷️ 5. External IDs and Vendor Extensions
+You may include external identifiers such as:
+
+```json
+"external_ids": {
+  "open_print_tag": "opt:polymaker:polylite-pla:white",
+  "gtin": "0000000000000"
+}
+```
+
+Vendor- and slicer-specific extensions belong under dedicated namespaces:
+
+```json
+"x_cura": { },
+"x_prusaslicer": { },
+"x_bambu": { },
+"x_orca": { }
+```
+
+Do not place slicer-specific fields at the top level.
+
+🤝 6. Pull Request Guidelines
+* Validate your JSON before submitting.
+* Use consistent indentation (2 or 4 spaces).
+* Include a brief PR description explaining your change.
+* Validate each profile in multi-file PRs.
+* If proposing schema changes, open an Issue first for discussion.
+
+📣 7. Discussion & Collaboration
+
+OpenPrint3D is still evolving.
+If you have ideas or improvements for schemas, tooling, workflows, or structure:
+
+➡️ Open an Issue and start a discussion!
+
+We welcome suggestions, debate, and contributions from across the community.
+
+Thank you for helping build an open, shared foundation for 3D-printing profiles!
