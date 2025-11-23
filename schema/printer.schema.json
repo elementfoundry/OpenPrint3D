@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openprint3d.org/schema/printer.schema.json",
+  "title": "OpenPrint3D Printer Profile",
+  "description": "Schema for OpenPrint3D printer profiles (geometry, capabilities, firmware, etc.).",
+  "type": "object",
+  "required": [
+    "op3d_schema",
+    "op3d_schema_version",
+    "id",
+    "manufacturer",
+    "model",
+    "build_volume",
+    "kinematics",
+    "axes",
+    "extruders",
+    "firmware"
+  ],
+  "properties": {
+    "op3d_schema": {
+      "type": "string",
+      "const": "printer",
+      "description": "Discriminator for this schema type."
+    },
+    "op3d_schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the printer schema, e.g. 0.1.0."
+    },
+    "id": {
+      "type": "string",
+      "description": "Stable identifier, e.g. 'Elegoo/Centauri-Carbon'."
+    },
+
+    "manufacturer": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string",
+      "description": "Optional variant name, e.g. 'Stock', 'DirectDriveMod'."
+    },
+
+    "build_volume": {
+      "type": "object",
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": { "type": "number", "description": "Build volume in X (mm)." },
+        "y": { "type": "number", "description": "Build volume in Y (mm)." },
+        "z": { "type": "number", "description": "Build volume in Z (mm)." },
+        "shape": {
+          "type": "string",
+          "enum": ["rectangular", "cylindrical"],
+          "default": "rectangular"
+        },
+        "origin": {
+          "type": "string",
+          "enum": ["center", "front_left"],
+          "default": "front_left",
+          "description": "Where (0,0) is assumed on the bed."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "kinematics": {
+      "type": "string",
+      "enum": [
+        "cartesian",
+        "corexy",
+        "corexz",
+        "delta",
+        "scara",
+        "bed_slinger",
+        "other"
+      ]
+    },
+
+    "axes": {
+      "type": "object",
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": {
+          "type": "object",
+          "properties": {
+            "max_speed": { "type": "number", "description": "mm/s." },
+            "max_accel": { "type": "number", "description": "mm/s²." }
+          },
+          "additionalProperties": false
+        },
+        "y": {
+          "type": "object",
+          "properties": {
+            "max_speed": { "type": "number" },
+            "max_accel": { "type": "number" }
+          },
+          "additionalProperties": false
+        },
+        "z": {
+          "type": "object",
+          "properties": {
+            "max_speed": { "type": "number" },
+            "max_accel": { "type": "number" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "extruders": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "nozzle_diameter"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Tool identifier, e.g. 'tool0'."
+          },
+          "nozzle_diameter": {
+            "type": "number",
+            "description": "Nozzle diameter in mm."
+          },
+          "max_temp": {
+            "type": "number",
+            "description": "Maximum safe nozzle temperature (°C)."
+          },
+          "min_temp": {
+            "type": "number",
+            "description": "Minimum usable nozzle temperature (°C)."
+          },
+          "retraction_supported": {
+            "type": "boolean",
+            "description": "True if retraction is supported for this tool."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "bed": {
+      "type": "object",
+      "properties": {
+        "heated": { "type": "boolean" },
+        "max_temp": {
+          "type": "number",
+          "description": "Maximum safe bed temperature (°C)."
+        },
+        "surface_type": {
+          "type": "string",
+          "description": "e.g. 'PEI-smooth', 'PEI-textured', 'glass'."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "chamber": {
+      "type": "object",
+      "properties": {
+        "heated": { "type": "boolean" },
+        "max_temp": {
+          "type": "number",
+          "description": "Maximum intended chamber temperature (°C)."
+        },
+        "passive": {
+          "type": "boolean",
+          "description": "True if the chamber is enclosed but not actively heated."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "firmware": {
+      "type": "object",
+      "required": ["flavor"],
+      "properties": {
+        "flavor": {
+          "type": "string",
+          "enum": [
+            "marlin",
+            "klipper",
+            "reprap",
+            "bambu",
+            "proprietary",
+            "other"
+          ]
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Free-form firmware identifier, version, or build string."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "network": {
+      "type": "object",
+      "properties": {
+        "has_wifi": { "type": "boolean" },
+        "has_ethernet": { "type": "boolean" },
+        "supports_lan_api": {
+          "type": "boolean",
+          "description": "True if there is a documented LAN/local API."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "external_ids": {
+      "type": "object",
+      "description": "Arbitrary external identifiers (SKU, internal IDs, etc.).",
+      "patternProperties": {
+        "^[a-zA-Z0-9_.-]+$": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "links": {
+      "type": "object",
+      "description": "Useful URLs (datasheet, manufacturer page, etc.).",
+      "patternProperties": {
+        "^[a-zA-Z0-9_.-]+$": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "notes": {
+      "type": "string"
+    },
+
+    "x_cura": { "type": "object" },
+    "x_prusaslicer": { "type": "object" },
+    "x_orca": { "type": "object" },
+    "x_bambu": { "type": "object" }
+  },
+
+  "patternProperties": {
+    "^x_[a-zA-Z0-9_.-]+$": {
+      "type": "object",
+      "description": "Vendor- or slicer-specific extensions."
+    }
+  },
+
+  "additionalProperties": false
+}
