@@ -21,8 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install jsonschema
 
       - name: Run OpenPrint3D validator
         run: |
-          python tools/validator.py profiles/
+          python tools/validate_schema.py profiles/
