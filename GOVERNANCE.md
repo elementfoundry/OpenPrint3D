@@ -1,6 +1,6 @@
 # OpenPrint3D Governance & Decision Policy
 
-OpenPrint3D is an open-source, community-driven project. Its long-term success depends on transparent collaboration, clear responsibilities, and respectful interaction. This document establishes the project’s governance model and defines how decisions are made, how contributors may become maintainers, and how community spaces are used.
+OpenPrint3D is an open-source, community-driven project. Its long-term success depends on transparent collaboration, clear responsibilities, and respectful interaction. This document defines how decisions are made, how contributors become maintainers, and how community spaces are used.
 
 ---
 
@@ -9,145 +9,169 @@ OpenPrint3D is an open-source, community-driven project. Its long-term success d
 OpenPrint3D is founded on the following core principles:
 
 - **Transparency** — All project-affecting decisions must be publicly visible and documented.
-- **Neutrality** — No single company, vendor, or individual should dominate the project.
-- **Inclusivity** — Contributors of all skill levels are welcome. Respectful collaboration is required.
-- **Stability** — APIs, schemas, and standards evolve through structured proposals, not unilateral changes.
-- **Openness** — The community is encouraged to discuss ideas openly and participate in shaping the direction of the project.
+- **Neutrality** — No single vendor, organization, or individual should dominate the project.
+- **Inclusivity** — Contributors of all backgrounds and skill levels are welcome.
+- **Stability** — Standards, schemas, and APIs evolve through structured proposals, not unilateral action.
+- **Openness** — The community is encouraged to participate meaningfully in shaping the direction of the project.
 
 ---
 
 ## 2. Roles and Responsibilities
 
 ### Contributors
-Anyone who submits issues, pull requests, documentation, or constructive feedback is considered a contributor. Contributors do not require special permissions.
+Anyone who files issues, submits pull requests, writes documentation, or provides constructive feedback is a contributor. No special permissions are required.
 
 ### Provisional Maintainers
-Provisional Maintainers are contributors who have shown initiative, understanding of the project’s direction, and a willingness to help guide its development. Provisional Maintainers may be granted elevated permissions (e.g., PR review, issue triage) at the discretion of the Project Lead.
+Provisional Maintainers are contributors who have demonstrated initiative, sound judgment, and alignment with the project’s goals. They may receive elevated permissions (e.g., issue triage, PR reviews) at the discretion of the Project Lead.
 
-Provisional status is intended to:
+The purpose of provisional status is to:
 - Onboard new maintainers,
 - Evaluate long-term fit,
-- Spread workload without granting full authority immediately.
+- Distribute workload early without conferring full authority.
 
 ### Maintainers
-Maintainers are trusted, long-term contributors who have demonstrated consistent participation, sound judgment, and strong alignment with the project’s values.
+Maintainers are trusted, long-term contributors who consistently participate, demonstrate technical depth, and uphold project values.
 
-Maintainers:
-- Review and merge PRs,
-- Participate in technical discussions,
-- Help define and steer the roadmap,
-- Uphold the Code of Conduct.
+Maintainers are responsible for:
+- Reviewing and merging PRs,
+- Participating in technical discussions,
+- Helping shape and execute the roadmap,
+- Upholding the Code of Conduct,
+- Supporting a healthy contributor ecosystem.
 
 Promotion from Provisional Maintainer to Maintainer is determined by the Project Lead, with input from existing maintainers.
 
 ### Project Lead
-The Project Lead provides final oversight, ensures long-term project vision, and resolves disputes when consensus cannot be reached. The Project Lead may delegate responsibilities, add or remove maintainers, and make binding decisions when necessary for project stability.
+The Project Lead:
+- Provides overall project direction,
+- Ensures adherence to governance,
+- Mediates disputes,
+- Adds or removes maintainers when necessary,
+- Makes final decisions when consensus cannot be reached.
+
+The Project Lead does not override community process except when required for project stability.
 
 ---
 
 ## 3. Decision Making
 
+### Lazy Consensus
+
+OpenPrint3D uses a **lazy consensus** model for most decisions:
+
+- A proposal (issue, PR, or RFC) is considered accepted if **no Maintainer raises a substantive objection within a reasonable time**, typically **72 hours**.
+- Silence is interpreted as agreement.
+- If concerns are raised, the proposer and maintainers collaborate to revise the proposal.
+- If consensus cannot be reached after good-faith effort, the matter is escalated to the Project Lead for a final decision.
+
+Lazy consensus keeps the project agile while ensuring maintainers have the opportunity to participate.
+
 ### Consensus First
-Most decisions should be made through discussion and rough consensus among maintainers.
+
+Whenever possible, decisions should be made through open discussion and rough consensus among maintainers.
 
 ### When Consensus Cannot Be Reached
-If maintainers cannot agree after good-faith discussion:
-- The matter is escalated to the Project Lead.
-- The Project Lead makes the final decision.
-- The decision is documented publicly (e.g., in an issue or RFC).
+
+If a proposal becomes contentious or blocked:
+1. Maintainers discuss in the GitHub issue/PR/RFC.
+2. If disagreement persists, the Project Lead mediates.
+3. The Project Lead makes the final decision.
+4. The decision is documented publicly.
 
 ### Changes to Governance
-Modifications to this GOVERNANCE.md must:
-- Be proposed via a GitHub issue and/or pull request, and
-- Be approved by the Project Lead after community review.
+
+Modifications to this governance document must:
+- Be proposed via a GitHub pull request,
+- Undergo community review,
+- Be approved by the Project Lead.
 
 ---
 
 ## 4. Communication Channels
 
-To ensure transparency, continuity, and equal access, **GitHub is the authoritative communication platform for OpenPrint3D**.
+To ensure transparency, longevity, and equal access, **GitHub is the authoritative communication platform for OpenPrint3D.**
 
-### 4.1 Authoritative Communication
-All official project communication, including:
-- Governance discussions  
+### 4.1 Authoritative Project Communication
+
+All official project matters must occur on GitHub, including:
+
 - Technical proposals  
 - Issues and bug reports  
 - Pull requests  
 - RFCs  
-- Project decisions  
-- Documentation updates  
+- Governance discussions  
+- Standards documentation  
+- Final decisions or votes  
 
-**must occur on GitHub**.
-
-GitHub serves as the **source of truth** because it provides:
+GitHub acts as the **source of truth** due to its:
 - Public visibility  
-- Permanent history  
+- Permanent record  
 - Searchability  
-- Archival integrity  
-- Clear decision trails  
+- Open participation  
+- Clear history of decisions  
 
-No decision that affects the project may be finalized exclusively through Discord, private messages, or any other platform.
+No project decision may be finalized on Discord, private chats, or any other platform without formal documentation on GitHub.
 
 ### 4.2 Community Spaces (Discord, etc.)
-Discord and other real-time platforms are **valuable community tools**, and may be used for:
-- Informal conversation  
-- Support channels  
+
+Real-time platforms such as Discord are welcomed and may host:
+
+- Community support chats  
 - Maintainer coordination  
+- Brainstorming sessions  
 - Live discussions  
-- Community events or office hours  
-- Early brainstorming  
+- Office hours  
+- Social/community events  
 
 However:
 
-**Discord is not an authoritative venue for project decisions.**  
-Any idea, proposal, consensus, or discussion originating on Discord must be formally moved to GitHub (issue, PR, or RFC) before it becomes part of the project’s record.
+**Discord is not an authoritative decision-making venue.**  
+Any idea, agreement, or concern originating on Discord **must** be brought to GitHub as an issue, PR, or RFC before it can influence the project.
 
-This ensures:
-- Fair participation for those not on Discord  
-- Long-term preservation of decisions  
-- Organizational neutrality  
-- Clear governance audit trails  
+Discord may receive GitHub webhook notifications *only if* they reinforce GitHub’s primary role, and only after maintainers reach consensus on their configuration.
 
-Discord may host GitHub webhooks or announcements only after maintainers reach consensus and confirm that such integrations do **not** shift authoritative communications away from GitHub.
-
-Personal or non-technical disagreements are not valid blocking reasons.
+---
 
 ## 5. Code of Conduct
 
-All contributors, maintainers, and community members must adhere to the OpenPrint3D Code of Conduct.  
-This includes:
+All contributors, maintainers, and community members must adhere to the OpenPrint3D Code of Conduct, which requires:
 
-- Treating others with respect  
-- Engaging constructively  
-- Avoiding harassment or discrimination  
-- Refraining from public call-outs or attacks (individuals or organizations)
+- Respectful communication  
+- Inclusive behavior  
+- Constructive engagement  
+- Avoiding personal attacks, harassment, or public shaming  
+- No targeted call-outs of individuals or organizations  
 
-Any violations will be addressed by the Project Lead and maintainers in accordance with the Code of Conduct document.
+Violations will be addressed by the Project Lead and maintainers according to the Code of Conduct.
 
 ---
 
 ## 6. Resolving Disputes
 
-For interpersonal or technical disputes:
-1. Attempt resolution in the appropriate GitHub discussion thread.  
-2. If unresolved, maintainers may request mediation from another maintainer or the Project Lead.  
-3. If still unresolved, the Project Lead makes the final determination.
+If disagreements arise:
+
+1. Attempt resolution in the appropriate GitHub thread.  
+2. If unresolved, maintainers may request mediation by another maintainer.  
+3. Persistent disputes are escalated to the Project Lead.  
+4. The Project Lead’s decision is final and will be documented publicly.
 
 ---
 
 ## 7. Becoming a Maintainer
 
 A contributor may be invited to become a Provisional Maintainer when they:
-- Demonstrate consistent, high-quality contributions  
-- Understand the project’s goals and architecture  
-- Communicate respectfully  
-- Participate in discussions constructively  
+
+- Consistently provide high-quality contributions,  
+- Understand the project’s goals and architecture,  
+- Communicate clearly and respectfully,  
+- Demonstrate reliability and initiative.
 
 They may become a full Maintainer when they:
-- Provide steady, thoughtful participation  
-- Demonstrate alignment with the project’s values  
-- Show sound technical judgment  
-- Maintain reliability over time  
+
+- Maintain steady participation,  
+- Show constructive engagement in reviews and discussions,  
+- Demonstrate sound technical judgment,  
+- Align with the project’s guiding principles.
 
 The Project Lead makes the final determination.
 
@@ -157,30 +181,31 @@ The Project Lead makes the final determination.
 
 Contributors and maintainers may step down at any time.
 
-The Project Lead may revoke maintainer status if:
-- A maintainer becomes inactive for an extended period  
-- Repeatedly violates project norms or governance  
-- Acts in a manner harmful to the project  
+The Project Lead may remove or reassign maintainers if they:
 
-Role changes are documented publicly on GitHub.
+- Become inactive for an extended period,  
+- Repeatedly violate governance or communication norms,  
+- Behave in a manner harmful to the project or community.  
+
+Role changes are documented publicly through a GitHub issue or PR.
 
 ---
 
 ## 9. Project Infrastructure
 
-Any infrastructure intended to serve as an **official project resource** (Discord integrations, websites, registries, documentation systems, automation, etc.) must be:
+Any infrastructure intended to serve as **official project resources** (e.g., Discord integrations, documentation sites, registries, automation, or tooling) must:
 
-- Proposed and discussed on GitHub  
-- Approved by the Project Lead  
-- Transferable to the project if the original creator departs  
-- Documented in the repository  
+- Be proposed and discussed on GitHub,  
+- Be approved by the Project Lead,  
+- Be transferable to the project if the original creator leaves,  
+- Have clear documentation in the repository.  
 
-This prevents fragmentation and ensures long-term sustainability.
+This ensures sustainability, openness, and continuity.
 
 ---
 
 ## 10. Final Notes
 
-OpenPrint3D is built by the community, for the community. This governance model is intentionally lightweight at the early stage but provides enough structure to prevent instability and ensure long-term openness, transparency, and neutrality.
+OpenPrint3D is a community effort with the goal of improving interoperability and standardization across the 3D-printing ecosystem. This governance document is intentionally lightweight at this stage but provides structure to ensure transparency, neutrality, and long-term continuity.
 
-As the project grows, this document may evolve through community proposals and pull requests.
+As the project evolves, this document may be refined through open proposals and pull requests.
