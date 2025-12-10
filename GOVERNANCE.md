@@ -1,224 +1,186 @@
 # OpenPrint3D Governance
 
-OpenPrint3D is an open, community-driven standard for portable and interoperable 3D-printing profiles.  
-This governance document defines how decisions are made, how maintainers operate, and how the project remains neutral, predictable, and sustainable as it grows.
-
-The goal is **clarity without complexity**.  
-This project succeeds by being open, trustworthy, and technically rigorous — not by weighing contributors down with process.
+OpenPrint3D is an open-source, community-driven project. Its long-term success depends on transparent collaboration, clear responsibilities, and respectful interaction. This document establishes the project’s governance model and defines how decisions are made, how contributors may become maintainers, and how community spaces are used.
 
 ---
 
-## 1. Purpose
+## 1. Guiding Principles
 
-OpenPrint3D governance exists to:
+OpenPrint3D is founded on the following core principles:
 
-- Maintain the project’s **vendor-neutral** stance  
-- Ensure long-term sustainability through shared stewardship  
-- Provide clarity around roles, responsibilities, and decision processes  
-- Empower maintainers without creating central bottlenecks  
-- Build confidence for users, developers, manufacturers, and slicer authors  
-
-This framework is deliberately lightweight and may evolve as the project matures.
+- **Transparency** — All project-affecting decisions must be publicly visible and documented.
+- **Neutrality** — No single company, vendor, or individual should dominate the project.
+- **Inclusivity** — Contributors of all skill levels are welcome. Respectful collaboration is required.
+- **Stability** — APIs, schemas, and standards evolve through structured proposals, not unilateral changes.
+- **Openness** — The community is encouraged to discuss ideas openly and participate in shaping the direction of the project.
 
 ---
 
-## 2. Roles
+## 2. Roles and Responsibilities
 
-### 2.1 Founder
-The Founder (currently **Michael “Synthetic Electron 3D”**) serves as:
+### Contributors
+Anyone who submits issues, pull requests, documentation, or constructive feedback is considered a contributor. Contributors do not require special permissions.
 
-- Vision and long-term strategy lead  
-- Final arbiter on major or direction-changing decisions  
-- Gatekeeper for appointing new maintainers  
-- Primary public representative when needed  
-- Steward of project neutrality and clarity  
+### Provisional Maintainers
+Provisional Maintainers are contributors who have shown initiative, understanding of the project’s direction, and a willingness to help guide its development. Provisional Maintainers may be granted elevated permissions (e.g., PR review, issue triage) at the discretion of the Project Lead.
 
-The Founder does **not** handle all day-to-day operations. Maintainers share that responsibility.
+Provisional status is intended to:
+- Onboard new maintainers,
+- Evaluate long-term fit,
+- Spread workload without granting full authority immediately.
 
----
+### Maintainers
+Maintainers are trusted, long-term contributors who have demonstrated consistent participation, sound judgment, and strong alignment with the project’s values.
 
-### 2.2 Maintainers
-Maintainers are trusted individuals who help operate the project. Their responsibilities include:
+Maintainers:
+- Review and merge PRs,
+- Participate in technical discussions,
+- Help define and steer the roadmap,
+- Uphold the Code of Conduct.
 
-- Reviewing and merging pull requests  
-- Triaging and labeling issues  
-- Ensuring schema, documentation, and tooling changes align with OP3D principles  
-- Participating in technical discussions and roadmap development  
-- Collaborating with the Founder and other maintainers on major changes  
+Promotion from Provisional Maintainer to Maintainer is determined by the Project Lead, with input from existing maintainers.
 
-Maintainers act with **consensus whenever possible**.
-
-#### Provisional Maintainers
-New maintainers may be added on a provisional basis (typically 30–60 days) until consistent engagement and alignment with OP3D principles are demonstrated.
-
-#### Emeritus Maintainers
-If a maintainer becomes inactive for an extended period (e.g., 60–90 days), they may be moved to Emeritus status until returning.
+### Project Lead
+The Project Lead provides final oversight, ensures long-term project vision, and resolves disputes when consensus cannot be reached. The Project Lead may delegate responsibilities, add or remove maintainers, and make binding decisions when necessary for project stability.
 
 ---
 
-### 2.3 Contributors
-Anyone may contribute to OpenPrint3D through:
+## 3. Decision Making
 
+### Consensus First
+Most decisions should be made through discussion and rough consensus among maintainers.
+
+### When Consensus Cannot Be Reached
+If maintainers cannot agree after good-faith discussion:
+- The matter is escalated to the Project Lead.
+- The Project Lead makes the final decision.
+- The decision is documented publicly (e.g., in an issue or RFC).
+
+### Changes to Governance
+Modifications to this GOVERNANCE.md must:
+- Be proposed via a GitHub pull request, and
+- Be approved by the Project Lead after community review.
+
+---
+
+## 4. Communication Channels
+
+To ensure transparency, continuity, and equal access, **GitHub is the authoritative communication platform for OpenPrint3D**.
+
+### 4.1 Authoritative Communication
+All official project communication, including:
+- Governance discussions  
+- Technical proposals  
+- Issues and bug reports  
 - Pull requests  
-- Issue reporting  
-- Proposals  
-- Documentation improvements  
-- Schema/design discussions  
+- RFCs  
+- Project decisions  
+- Documentation updates  
 
-Contributors do not have merging privileges but are essential to project growth.
+**must occur on GitHub**.
 
----
+GitHub serves as the **source of truth** because it provides:
+- Public visibility  
+- Permanent history  
+- Searchability  
+- Archival integrity  
+- Clear decision trails  
 
-### 2.4 Advisors (Optional / Future)
-Subject-matter experts — including manufacturers or slicer developers — may be invited to provide input on:
+No decision that affects the project may be finalized exclusively through Discord, private messages, or any other platform.
 
-- Material science considerations  
-- Firmware/slicer integration  
-- Vendor implementation feasibility  
+### 4.2 Community Spaces (Discord, etc.)
+Discord and other real-time platforms are **valuable community tools**, and may be used for:
+- Informal conversation  
+- Support channels  
+- Maintainer coordination  
+- Live discussions  
+- Community events or office hours  
+- Early brainstorming  
 
-Advisors do not have merge rights unless separately appointed as maintainers.
+However:
 
----
+**Discord is not an authoritative venue for project decisions.**  
+Any idea, proposal, consensus, or discussion originating on Discord must be formally moved to GitHub (issue, PR, or RFC) before it becomes part of the project’s record.
 
-## 3. Decision-Making
+This ensures:
+- Fair participation for those not on Discord  
+- Long-term preservation of decisions  
+- Organizational neutrality  
+- Clear governance audit trails  
 
-OpenPrint3D uses a pragmatic model that balances speed with community input.
-
-### 3.1 Types of Decisions
-
-#### A. Routine Changes
-Examples:
-- Documentation cleanups  
-- Typo fixes  
-- Minor schema clarifications  
-
-Handled directly by maintainers.
-
----
-
-#### B. Significant Technical Changes
-Examples:
-- Major schema additions  
-- Breaking schema changes  
-- New data models  
-- Changes affecting interoperability or profile structure  
-
-Require:
-- Maintainer consensus  
-- Founder confirmation  
-- Discussion in a GitHub Issue prior to merge  
+Discord may host GitHub webhooks or announcements only after maintainers reach consensus and confirm that such integrations do **not** shift authoritative communications away from GitHub.
 
 ---
 
-#### C. Strategic or Governance-Level Changes
-Examples:
-- Modifications to governance  
-- Licensing changes  
-- Direction-changing shifts to the standard  
-- API or ecosystem-breaking changes  
+## 5. Code of Conduct
 
-Require:
-- Founder approval  
-- Maintainer input  
-- A community discussion window (typically 5–14 days)
+All contributors, maintainers, and community members must adhere to the OpenPrint3D Code of Conduct.  
+This includes:
 
----
+- Treating others with respect  
+- Engaging constructively  
+- Avoiding harassment or discrimination  
+- Refraining from public call-outs or attacks (individuals or organizations)
 
-## 4. Guiding Principles
-
-All decisions should align with the following principles:
-
-### Neutrality
-No vendor bias. The standard must remain open, fair, and universally adoptable.
-
-### Clarity & Minimalism
-Prefer the simplest structure that solves the problem.
-
-### Stability
-Avoid breaking changes unless absolutely necessary.
-
-### Interoperability
-Schemas and profiles must facilitate compatibility across slicers, printers, and vendors.
-
-### Reproducibility
-Implementations must not rely on proprietary or inaccessible tooling.
+Any violations will be addressed by the Project Lead and maintainers in accordance with the Code of Conduct document.
 
 ---
 
-## 5. Maintainer Expectations
+## 6. Resolving Disputes
 
-Maintainers are expected to:
-
-- Review pull requests within a reasonable timeframe (e.g., 7 days)  
-- Engage in discussions when tagged  
-- Uphold project principles and neutrality  
-- Disclose conflicts of interest  
-- Coordinate with other maintainers on significant changes  
-- Step back when unavailable for extended periods  
-
-Maintainers represent the project and are expected to model professionalism, clarity, and respect.
+For interpersonal or technical disputes:
+1. Attempt resolution in the appropriate GitHub discussion thread.  
+2. If unresolved, maintainers may request mediation from another maintainer or the Project Lead.  
+3. If still unresolved, the Project Lead makes the final determination.
 
 ---
 
-## 6. Conflict Resolution
+## 7. Becoming a Maintainer
 
-Most disagreements should be resolved through:
+A contributor may be invited to become a Provisional Maintainer when they:
+- Demonstrate consistent, high-quality contributions  
+- Understand the project’s goals and architecture  
+- Communicate respectfully  
+- Participate in discussions constructively  
 
-1. Technical reasoning  
-2. Reference to project principles  
-3. Maintainer consensus  
+They may become a full Maintainer when they:
+- Provide steady, thoughtful participation  
+- Demonstrate alignment with the project’s values  
+- Show sound technical judgment  
+- Maintain reliability over time  
 
-If consensus cannot be reached, the Founder serves as the final decision-maker to ensure the project continues moving forward.
-
----
-
-## 7. Transparency
-
-OpenPrint3D operates publicly and transparently:
-
-- Major proposals should be discussed in GitHub Issues  
-- Significant changes require clearly communicated rationale  
-- Roadmap updates and governance adjustments should be shared openly  
-
-Private communication may be used for early vendor discussions or sensitive topics but is not the norm.
+The Project Lead makes the final determination.
 
 ---
 
-## 8. Long-Term Sustainability
+## 8. Leaving or Changing Roles
 
-OpenPrint3D is intended to outlive any single individual.  
-If the Founder permanently steps back:
+Contributors and maintainers may step down at any time.
 
-- Maintainers may elect a **Lead Maintainer** by majority vote  
-- The project remains open-source, vendor-neutral, and community-driven  
+The Project Lead may revoke maintainer status if:
+- A maintainer becomes inactive for an extended period  
+- Repeatedly violates project norms or governance  
+- Acts in a manner harmful to the project  
 
-This ensures continuity and trust for adopters.
-
----
-
-## 9. Vendor Participation
-
-Manufacturers, slicer developers, and other industry participants are welcome, but:
-
-- No vendor receives preferential influence  
-- No proprietary lock-in is permitted  
-- Any extensions must remain open and freely implementable  
-
-The standard must benefit the entire ecosystem, not any single entity.
+Role changes are documented publicly on GitHub.
 
 ---
 
-## 10. Amendments
+## 9. Project Infrastructure
 
-This governance document may be amended through:
+Any infrastructure intended to serve as an **official project resource** (Discord integrations, websites, registries, documentation systems, automation, etc.) must be:
 
-- A proposal via GitHub Issue  
-- Maintainer discussion  
-- Founder approval  
-- A public comment period when appropriate  
+- Proposed and discussed on GitHub  
+- Approved by the Project Lead  
+- Transferable to the project if the original creator departs  
+- Documented in the repository  
 
-Amendments should maintain the spirit of openness, neutrality, and simplicity.
+This prevents fragmentation and ensures long-term sustainability.
 
 ---
 
-# End of Governance Document
+## 10. Final Notes
+
+OpenPrint3D is built by the community, for the community. This governance model is intentionally lightweight at the early stage but provides enough structure to prevent instability and ensure long-term openness, transparency, and neutrality.
+
+As the project grows, this document may evolve through community proposals and pull requests.
